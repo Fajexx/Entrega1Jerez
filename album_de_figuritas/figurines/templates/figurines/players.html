@@ -1,0 +1,40 @@
+{% extends 'home/index.html' %}
+{% load static %}
+{% block block_content %}
+
+<header class="masthead" style="background-image: url('../../static/home/assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Figuritas de jugadores</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+
+            {% for player in players %}
+            <div class="post-preview">
+                <a href="post.html">
+                    <h2 class="post-title">{{ player.name }}</h2>
+                    <h3 class="post-subtitle">País: {{ player.country }}</h3>
+                    <h3 class="post-subtitle">Posición: {{ player.position }}</h3>
+                    <h3 class="post-subtitle">Edad: {{ player.age }}</h3>
+                    <h3 class="post-subtitle">Juega en: {{ player.team}}</h3>
+                </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            {% endfor %}
+        
+        </div>
+    </div>
+</div>    
+
+{% endblock %}

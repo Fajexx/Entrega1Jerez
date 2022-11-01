@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'figurines',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            '/Users/fabri/Desktop/proyectos-python/Entrega1Jerez/album_de_figuritas/home/templates/home'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
